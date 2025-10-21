@@ -164,7 +164,7 @@ def statData(stock):
 
     ### Title Bar
     SD.title(stock + ' STATS')
-    SD.iconbitmap('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/Images/Favicon.ico')
+    SD.iconbitmap('Zephyr Limit 1.4/Images/Favicon.ico')
 
     ### SETTING LABELS
     ### Total Time Trading
@@ -442,14 +442,14 @@ def graphData(stock, data, SP, Av1, Av2, mfi, rsi, k, d, macd, ema9, emaslow, em
 ### Current Price Data
 def currentPull():
     currentVar = []
-    currentVar = loadtxt('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/Current.txt', dtype=str)
+    currentVar = loadtxt('Zephyr Limit 1.4/Current.txt', dtype=str)
     return currentVar
 
 
 ### Config Settings
 def configPull():
     configPullVar = []
-    configPullVar = loadtxt('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/Config.txt', dtype=int)
+    configPullVar = loadtxt('Zephyr Limit 1.4/Config.txt', dtype=int)
     #macdShort, macdLong, macdSignal, kPeriod, dPeriod, sLimitHigh, sLimitLow, MA1, MA2, rsiPeriod, rLimitHigh, rLimitLow, mfiPeriod, mLimitHigh, mLimitLow, B, S
     #configPullVar = [10, 30, 10, 10, 3, 80, 20, 7, 15, 15, 65, 35, 14, 70, 30, 1, 1]
     return configPullVar
@@ -458,7 +458,7 @@ def configPull():
 ### Symbol List
 def listPull():
     listPullVar = []
-    listPullVar = loadtxt('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/List.txt', dtype=str)
+    listPullVar = loadtxt('Zephyr Limit 1.4/List.txt', dtype=str)
     return np.atleast_1d(listPullVar)
 
 
@@ -476,7 +476,7 @@ def setMACD():
 
     ### Title Bar
     MACD.title('Zephyr')
-    MACD.iconbitmap('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/Images/Favicon.ico')
+    MACD.iconbitmap('Zephyr Limit 1.4/Images/Favicon.ico')
 
     ### Text Box
     macdShortVal = Tk.IntVar(MACD, macdShort)
@@ -525,7 +525,7 @@ def setStoch():
 
     ### Title Bar
     STOCH.title('Zephyr')
-    STOCH.iconbitmap('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/Images/Favicon.ico')
+    STOCH.iconbitmap('Zephyr Limit 1.4/Images/Favicon.ico')
 
     ### Text Box
     kPeriodVal = Tk.IntVar(STOCH, kPeriod)
@@ -580,7 +580,7 @@ def setMAs():
 
     ### Title Bar
     MAs.title('Zephyr')
-    MAs.iconbitmap('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/Images/Favicon.ico')
+    MAs.iconbitmap('Zephyr Limit 1.4/Images/Favicon.ico')
 
     ### Text Box
     MA1Val = Tk.IntVar(MAs, MA1)
@@ -620,7 +620,7 @@ def setRSI():
 
     ### Title Bar
     RSI.title('Zephyr')
-    RSI.iconbitmap('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/Images/Favicon.ico')
+    RSI.iconbitmap('Zephyr Limit 1.4/Images/Favicon.ico')
 
     ### Text Box
     rsiPeriodVal = Tk.IntVar(RSI, rsiPeriod)
@@ -668,7 +668,7 @@ def setMFI():
 
     ### Title Bar
     MFI.title('Zephyr')
-    MFI.iconbitmap('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/Images/Favicon.ico')
+    MFI.iconbitmap('Zephyr Limit 1.4/Images/Favicon.ico')
 
     ### Text Box
     mfiPeriodVal = Tk.IntVar(MFI, mfiPeriod)
@@ -715,7 +715,7 @@ def setLSS():
 
     ### Title Bar
     LSS.title('Zephyr')
-    LSS.iconbitmap('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/Images/Favicon.ico')
+    LSS.iconbitmap('Zephyr Limit 1.4/Images/Favicon.ico')
 
     ### Text Box
     LVal = Tk.IntVar(LSS, L)
@@ -749,10 +749,10 @@ def setSymbolList():
 
     ### Title Bar
     SL.title('Zephyr')
-    SL.iconbitmap('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/Images/Favicon.ico')
+    SL.iconbitmap('Zephyr Limit 1.4/Images/Favicon.ico')
 
     ### Make Variable
-    openFile = open('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/List.txt')
+    openFile = open('Zephyr Limit 1.4/List.txt')
     listVar = ''
     for i in openFile:
         listVar += i
@@ -769,7 +769,7 @@ def setSymbolList():
 
 def symbolListSaveButton(listBox):
     newList = listBox.get(1.0, Tk.END)
-    outToFile = open('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/List.txt', 'w')
+    outToFile = open('Zephyr Limit 1.4/List.txt', 'w')
     outToFile.write(newList)
     outToFile.close()
 
@@ -781,7 +781,7 @@ def setCurrentData():
 
     ### Title Bar
     CD.title('Zephyr')
-    CD.iconbitmap('C:/Users/dnash/My Drive/General/Code/Zephyr Limit 1.4/Images/Favicon.ico')
+    CD.iconbitmap('Zephyr Limit 1.4/Images/Favicon.ico')
 
     ### Text Box
     currentDataVar = Tk.StringVar(CD, 'date,close,high,low,open,volume')
