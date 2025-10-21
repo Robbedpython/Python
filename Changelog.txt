@@ -1,0 +1,36 @@
+Zephyr V1.4:
+Switched from Visual Studio to Ninja IDE
+Changed format of changelog (1.3 is either the same as 1.2 or changelog was not updated)
+Added Classes
+
+StartingClasses:
+Made a data class with methods to calculate indicators
+
+MyFunctions:
+Removed indicator calculation functions
+
+GUI:
+none
+
+Known Issues:
+Inputing current data option needs to be easier to use
+Config and List variables need to be saved somewhere other than text file
+Current data needs to be easier to use
+Data could be pulled from excel
+
+
+Zephyr V1.2:
+Made files into VisualStudio project
+
+MyFunctions:
+Changed stats to calculate
+Made statData initial function
+Removed short position
+
+GUI:
+none
+
+Known Issues:
+Inputing current data option needs to be easier to use
+Config and List variables need to be saved somewhere other than text file
+Data needs to be pulled in a way easier to manipulate

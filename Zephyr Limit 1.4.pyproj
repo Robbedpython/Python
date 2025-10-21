@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{762c2050-55e1-4677-a7dc-fbdf892068ed}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>GUI.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>CondaEnv|CondaEnv|Conda37</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Changelog.txt" />
+    <Content Include="Config.txt" />
+    <Content Include="Current.txt" />
+    <Content Include="Images\AppIcon.png" />
+    <Content Include="Images\Button.gif" />
+    <Content Include="Images\download.jpg" />
+    <Content Include="Images\example.png" />
+    <Content Include="Images\Favicon.ico" />
+    <Content Include="Images\Login.gif" />
+    <Content Include="Images\Text.gif" />
+    <Content Include="Images\thing.jpg" />
+    <Content Include="List.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI.py" />
+    <Compile Include="module1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyFunctions.py" />
+    <Compile Include="StartingClasses.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|Conda37" />
+    <InterpreterReference Include="CondaEnv|CondaEnv|env" />
+    <InterpreterReference Include="CondaEnv|CondaEnv|env2.7" />
+    <InterpreterReference Include="CondaEnv|CondaEnv|env27" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
