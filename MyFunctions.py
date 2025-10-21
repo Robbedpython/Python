@@ -116,8 +116,8 @@ def statData(stock):
             if b >= B:
                 buyPrice = data.closep[i]
                 stance = 'In'
-                startingTime = data.date[i]
-                overallStartingTime = data.date[i]
+                startingTime = int(data.date[i].timestamp())
+                overallStartingTime = int(data.date[i].timestamp())
                 overallStartingPrice = buyPrice
                 inSignal = True
 
@@ -126,10 +126,10 @@ def statData(stock):
                 sellPrice = data.closep[i]
                 totalProfit += (sellPrice - buyPrice)
                 stance = 'Out'
-                endingTime = data.date[i]
-                #totalInvestedTime += (endingTime - startingTime)
+                endingTime = int(data.date[i].timestamp())
+                totalInvestedTime += (endingTime - startingTime) / 86400
                 tradeCount += 1
-                overallEndingTime = data.date[i]
+                overallEndingTime = int(data.date[i].timestamp())
                 overallEndingPrice = sellPrice
                 inSignal = False
                 outSignal = True
@@ -138,7 +138,7 @@ def statData(stock):
             if b >= B:
                 buyPrice = data.closep[i]
                 stance = 'In'
-                startingTime = data.date[i]
+                startingTime = int(data.date[i].timestamp())
                 inSignal = True
                 outSignal = False
 
@@ -148,8 +148,8 @@ def statData(stock):
     totalProfit = round(totalProfit, 2)
     percentProfit = round((totalProfit / overallStartingPrice) * 100, 2)
     averageTradeLength = round(totalInvestedTime / tradeCount, 2)
-    overallTime = 50 #overallEndingTime - overallStartingTime
-    percentageInvestedTime = 50 # round((totalInvestedTime / overallTime) * 100, 2)
+    overallTime = (overallEndingTime - overallStartingTime) / 86400
+    percentageInvestedTime = round((totalInvestedTime / overallTime) * 100, 2)
     naturalProfit = round(overallEndingPrice - overallStartingPrice, 2)
     naturalPercentProfit = round((naturalProfit / overallStartingPrice) * 100, 2)
     performance = round(totalProfit - naturalProfit, 2)
