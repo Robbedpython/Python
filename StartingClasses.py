@@ -17,12 +17,7 @@ matplotlib.rcParams.update({'font.size': 9})
 class stockData:
 
     def __init__(self, symbol):
-        #print str(datetime.datetime.fromtimestamp(int(time.time())).strftime('%Y-%m-%d %H:%M:%S'))
-
-        #data = Quandl.get("FRED/" + symbol, trim_start = "2016-01-01", trim_end = "2019-12-31", api_key = "1JcgJqw61hFGk9EYj5jn")
         data = yf.download(symbol, start="2020-01-01", end="2021-01-01")
-
-        #date, closep, highp, lowp, openp, volume = np.loadtxt(stockFile, delimiter=',', unpack=True, converters={0: mdates.strpdate2num('%Y%m%d')})
 
         #self.date = [mdates.date2num(d) for d in data.index.to_datetime()]
         self.date = data.index
