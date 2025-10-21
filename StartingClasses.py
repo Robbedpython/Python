@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import matplotlib.dates as mdates
 import matplotlib
-import quandl as Quandl
 import pandas as pd
 import pylab
 import tkinter as Tk
