@@ -289,7 +289,7 @@ def graphData(stock, data, SP, Av1, Av2, mfi, rsi, k, d, macd, ema9, emaslow, em
     plt.ion()
 
     ### Price Plot
-    dataFrame = yf.download(stock, start="2020-01-01", end="2021-01-01", multi_level_index=False)
+    dataFrame = yf.download(stock, start="2023-01-01", end="2024-01-01", multi_level_index=False)
     mplfinance.plot(dataFrame, type='candle', style='yahoo', title=stock, ylabel='Price', block=False)
     
     ### MA and Volume

@@ -13,7 +13,6 @@ from MyFunctions import configPull
 from MyFunctions import listPull
 from MyFunctions import currentPull
 from MyFunctions import statData
-import os
 
 
 ### MAIN WINDOW FUNCTIONS
@@ -68,7 +67,6 @@ def keepFlat(Event):
 ### Start of GUI
 root = Tk.Tk()
 root.geometry('400x500+200+100')
-print(os.getcwd())
 ### Initial Definitions
 canvas1 = Tk.Canvas(root, bg='black')
 bImage = Tk.PhotoImage(file='Zephyr Limit 1.4/Images/Login.gif')
